@@ -35,11 +35,11 @@ app.use(cors({
 app.use('/', Router);
 app.use('/app', appRoute);
 
-// connectDB();
+connectDB();
 
-connectDB().then(() => {
-  seedLevels(); 
-});
+// connectDB().then(() => {
+//   seedLevels(); 
+// });
 
 const PORT = process.env.PORT || 6000;
 
