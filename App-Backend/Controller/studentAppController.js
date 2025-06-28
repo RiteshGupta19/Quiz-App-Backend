@@ -79,7 +79,7 @@ const submitAnswer = async (req, res) => {
       answerText 
     } = req.body;
 
-    console.log(req.body);
+    // console.log(req.body);
 
     // Check duplicate submission
     const existing = await TrackAnswer.findOne({ studentId, questionId });
@@ -175,7 +175,7 @@ const getAnswersByStudentAndCourse = async (req, res) => {
       })
       .lean();
 
- console.log('answers', answers);
+//  console.log('answers', answers);
 
 
 
@@ -185,7 +185,7 @@ const getAnswersByStudentAndCourse = async (req, res) => {
       transcript: answer.questionId?.audioAnswer?.transcript || null,
     }));
 
-    console.log('enrichedAnswers', enrichedAnswers);
+    // console.log('enrichedAnswers', enrichedAnswers);
 
 
     res.status(200).json({ data: enrichedAnswers });

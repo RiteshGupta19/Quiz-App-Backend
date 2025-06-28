@@ -67,7 +67,7 @@ const createCourse = async (req, res) => {
 const getLevelsByCourseId = async (req, res) => {
   const { courseId } = req.params;
 
-console.log('courseId', courseId)
+// console.log('courseId', courseId)
 
 
   if (!courseId) {
@@ -81,7 +81,7 @@ console.log('courseId', courseId)
       return res.status(404).json({ error: 'Course not found' });
     }
 
-console.log('course', course)
+// console.log('course', course)
 
     return res.status(200).json({ levels: course.levelIds });
   } catch (error) {

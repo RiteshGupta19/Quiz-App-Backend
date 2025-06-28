@@ -37,7 +37,7 @@ exports.getQuestionsByLevelId = async (req, res) => {
     if (!questions.length) {
       return res.status(404).json({ message: 'No questions found for this level.' });
     }
-    console.log('objectques',questions);
+    // console.log('objectques',questions);
     res.status(200).json({
       message: 'Questions fetched successfully',
       data: questions,

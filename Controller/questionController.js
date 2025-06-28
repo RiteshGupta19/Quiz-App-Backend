@@ -28,8 +28,8 @@ const {uploadImageToGCS, getSignedUrl} = require('../utils/gcpMethod')
 
 const createQuestion = async (req, res) => {
 
-console.log("req.file", req.file); // Confirm multer received file
-console.log("req.body", req.body); // Confirm all fields are present
+// console.log("req.file", req.file); // Confirm multer received file
+// console.log("req.body", req.body); // Confirm all fields are present
 
 
   try {

@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const sendOtp = async (req, res) => {
     const { mobileNo } = req.body;
 
-    console.log('req.body', req.body)
+    // console.log('req.body', req.body)
 
 
     try {
