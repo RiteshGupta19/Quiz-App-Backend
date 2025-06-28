@@ -19,18 +19,6 @@ const studentSchema = new mongoose.Schema(
         ref: 'Course',
       },
     ],
-    // courses: [
-    //   {
-    //     courseId: {
-    //       type: mongoose.Schema.Types.ObjectId,
-    //       ref: 'Course',
-    //     },
-    //     registrationDate: {
-    //       type: Date,
-    //       default: Date.now, 
-    //     }
-    //   }
-    // ],
     isEnrolled: {
       type: Boolean,
       default: false,

@@ -67,7 +67,7 @@ const sendOtp = async (req, res) => {
         }
 
         // Send OTP via SMS service
-        // await sendLoginOtp(mobileNo, otp);
+        await sendLoginOtp(mobileNo, otp);
 
         return res.status(200).json({
             message: 'OTP sent successfully',
