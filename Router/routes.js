@@ -10,6 +10,8 @@ const { createQuestion, getQuestionsByCourseAndLevel } = require('../Controller/
 const audioUpload = require('../Middleware/audioMiddleware');
 const { createQACourseLevel, getCourseLevelsByCourseId } = require('../Controller/QALevelController');
 const { createQAQuestion, getQuestionsByLevelId } = require('../Controller/qaQuestionController');
+const { getDashboardData } = require('../Controller/dashboardController');
+const { getLevelCompletionStatus } = require('../Controller/getLevelCompletionStatus');
 
 
 // AUTH
@@ -19,6 +21,9 @@ Router.post('/sign-up', signUp)
 Router.post('/sign-in', signIn)
 Router.get('/users/profile', authMiddleware, getUserData);
 Router.get('/refresh-token', refreshAccessToken);
+
+//Dashboard
+Router.get('/app/dashboard/:studentId', getDashboardData);
 
 
 // STUDENT
@@ -44,5 +49,10 @@ Router.get('/app/qa-level/:courseId', getCourseLevelsByCourseId);
 
 Router.post('/qa-questions', createQAQuestion);
 Router.get('/app/qa-questions/:courseId/:levelId', getQuestionsByLevelId);
+
+//Final Complition status
+
+Router.get('/app/completion-status/:studentId/:courseId', getLevelCompletionStatus);
+
 
 module.exports = Router;
