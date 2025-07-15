@@ -25,8 +25,9 @@ app.use(cookieParser());
 
 
 app.use(cors({
-  origin: '*',
+  origin: ['http://localhost:3001','http://localhost:3000'], // your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
 
 
@@ -41,7 +42,7 @@ connectDB();
 //   seedLevels(); 
 // });
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5000;
 
 // app.listen(PORT, ()=>{
 //     console.log(`Server is Running on Port ${PORT}`)

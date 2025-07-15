@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const QAQuestionSchema = new mongoose.Schema({
   courseId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Course',
+    ref: "Course",
     required: true,
   },
   levelId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'CourseLevel',
+    ref: "QA-Level",
     required: true,
   },
   question: {
@@ -21,4 +21,4 @@ const QAQuestionSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('QAQuestion', QAQuestionSchema);
+module.exports = mongoose.model("QAQuestion", QAQuestionSchema);

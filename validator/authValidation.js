@@ -34,12 +34,12 @@ const signUpValidation = Joi.object({
       'string.pattern.base': 'Password must contain at least one special character',
     }),
 
-  tandc: Joi.boolean()
-    .valid(true)
+    repass:  Joi.string()
+    .trim()
+    .replace(/\s+/g, '') 
+    .min(6)
+    .pattern(/^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/)
     .required()
-    .messages({
-      'any.only': 'You must agree to the Terms & Conditions',
-    }),
 });
 
 
